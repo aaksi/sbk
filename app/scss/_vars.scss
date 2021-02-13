@@ -1,0 +1,26 @@
+@mixin druk {
+    font-family: 'Druk Cyr' sans-serif;
+    font-weight: 500;
+}
+@mixin euclid {
+    font-family: 'Euclid Circular A' , sans-serif;
+    font-weight: 400;
+}
+@mixin muller-medium {
+    font-family: 'Muller' , sans-serif;
+    font-weight: 500;
+}
+@mixin muller-italic {
+    font-family: 'Muller Regular Italic' , sans-serif;
+    font-weight: 00;
+}
+@mixin muller {
+    font-family: 'Muller' , sans-serif;
+    font-weight: 400;
+}
+@mixin muller-bold {
+    font-family: 'Muller Bold' , sans-serif;
+    font-weight: 700;
+}
+$dark: #242734;
+$yellow: #ffdf6d;
