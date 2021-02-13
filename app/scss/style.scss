@@ -35,7 +35,7 @@
             height: 3px;
             background-color: $dark;
             display: inline-block;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             transition: opacity 0.3s, transform 0.5s;
         }
         &::before,
@@ -135,9 +135,7 @@
     }
     &__title{
         padding-top: 93px;
-        @include muller-medium;
-        font-size: 48px;
-        line-height: 48px;
+        
         max-width: 673px;
     }
     &__subtitle{
@@ -268,3 +266,365 @@
 
 }
 // top end 
+
+
+
+
+
+
+// choice start 
+.choice{
+    &__inner{
+        margin-bottom: 100px;
+    }
+    &__title{
+        max-width: 352px;
+        margin-bottom: 30px;
+    }
+    &__items{
+        display: flex;
+        padding-bottom: 104px;
+        margin-left: -18px;
+        border-bottom: 1px solid #E5E5E5;
+
+    }
+    &__item{
+        width: 242px;
+        flex-basis: calc(20% - 18px);
+        margin-left: 18px;
+    }
+    &__item-img{
+        margin-bottom: 19px;
+        img{
+            width: 100%;
+            height: 140px;
+            filter: drop-shadow(0px 24px 32px rgba(0, 0, 0, 0.04)), drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.04)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.04)), drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+        }
+    }
+    &__item-title{
+        font-size: 18px;
+    }
+    &__info{
+        padding-top: 97px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__info-item{
+        padding-top: 77px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 58px;
+            height: 58px;
+        }
+        &--kitchen{
+            &::before{
+                background-image: url('../images/icons/kitchen.svg');
+            }
+        }
+        &--document{
+            &::before{
+                background-image: url('../images/icons/document.svg');
+            }
+        }
+        &--car{
+            &::before{
+                background-image: url('../images/icons/car.svg');
+                background-position-y: -11px;
+                width: 84px;
+            }
+        }
+    }
+    &__info-title{
+        @include muller-medium;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 6px;
+    }
+    &__info-btn{
+        font-size: 15px;
+        line-height: 17px;
+        text-decoration: underline;
+        &--yellow{
+            height: 44px;
+            padding-top: 13px;
+            padding-bottom: 14px;
+            width: 260px;
+        }
+    }
+}
+// schoice end 
+
+
+
+
+
+// catalog start 
+.catalog{
+    background-color: #EEF0F4;
+    &__inner{
+    }
+    &__section{
+
+        padding-top: 81px;
+        border-bottom: 1px solid $dark;
+        margin-bottom: 33px;
+    }
+    &__furniture{
+    }
+    .slider-btn{
+        position: absolute;
+      
+        width: 100px;
+        height: 40px;
+        border: none;
+        right: 0;
+        bottom: 55px;
+        padding: 15px;
+        outline: none;
+        cursor: pointer;
+        transition: all ease-in-out .3s ;
+        border: 1px solid transparent;
+        &:hover{
+            border: 1px solid $dark;
+            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04)), drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04)), drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+            transition: all ease-in-out .3s ;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            width: 54px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            background-image: url('../images/icons/arrow-slider.svg');
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &--left{
+            right: 117px;
+            transform: rotate(180deg);
+        }
+    }
+}
+.catalog{
+    &__title{
+        max-width: 200px;
+        margin-bottom: 48px;
+    }
+    &__slider{
+        padding-bottom: 140px;
+        // border-bottom: 1px solid $dark;
+    }
+    &__item{
+        max-width: 416px;
+        cursor: pointer;
+        &:hover{
+            .catalog__item-img{
+                &::before{
+                    opacity: 1;
+                    transition: all ease-in-out .3s ;
+                }
+            }
+            .catalog__item-title{
+                border-bottom: 2px solid $dark;
+                // text-decoration: underline;
+                transition: all ease-in-out .3s ;
+            }
+        }
+        
+    }
+    &__item-img{
+        margin-bottom: 24px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-image: url('../images/icons/arrow-slideritem.svg');
+            width: 108px;
+            height: 46px;
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: all ease-in-out .3s ;
+        }
+        img{
+            width: 100%;
+            height: 306px;
+            object-fit: cover;
+        }
+    }
+    &__item-title{
+        font-size: 24px;
+        line-height: 29px;
+        @include muller;
+        transition: all ease-in-out .3s ;
+        // text-decoration: none;
+        border-bottom: 2px solid transparent;
+        display: inline-block;
+    }
+    &__item-subtitle{
+        color: #BBBDC4;
+        margin-top: 10px;
+    }
+}
+.catalog__card{
+    background-color: #fff;
+}
+.catalog__card-inner{
+    padding: 58px 69px 54px;
+
+}
+.catalog__card-gallery{
+    max-width: 746px;
+}
+.gallery-line{
+    display: flex;     
+    justify-content: space-between; 
+}
+.gallery__big{
+    max-width: 746px;
+    height: 466px;
+    margin-bottom: 6px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+.gallery__small{
+    margin-right: 6px;
+    width: 101px;
+    height: 75px;
+    cursor: pointer;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.catalog__card-btn--close{
+    font-size: 12px;
+    line-height: 17px;
+    @include muller-medium;
+    color: #192934;
+    margin-bottom: 16px;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 20px;
+        background-image: url('../images/icons/arrowleft-card.svg');
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.catalog__card-info{
+    max-width: 350px;
+}
+.card__info-title{
+    font-size: 36px;
+    line-height: 43px;
+    color: #192934;
+    margin-bottom: 19px;
+}
+.card__info-lines{
+    margin-bottom: 120px;
+}
+.card__info-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #BDBDBD;
+    color: #192934;
+    p{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    
+    .card__line-info{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .card__line-color{
+        width: 17px;
+        height: 17px;
+        margin-left: 5px;
+        margin-top: 10px;
+        display: inline-block;
+        &--pink{
+            background-color: #FCCDC3;
+        } 
+        &--green{
+            background-color: #62C5BF;
+        } 
+        &--yellow{
+            background-color: $yellow;
+        } 
+        &--grey{
+            background-color: #C4C4C4;
+        } 
+        &--black{
+            background-color: $dark;
+        } 
+    }
+}
+.card__info-phone{
+    margin-bottom: 39px;
+    p{
+        font-size: 15px;
+        line-height: 17px;  
+        color: #192934;  
+        margin-bottom: 5px;  
+    }
+    a{
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+.card__info-form{
+    p{
+        font-size: 15px;
+        line-height: 17px;
+        max-width: 269px;
+    }
+    form{
+        width: 100%;
+        input{
+            display: block;
+            width: 100%;
+            border: 1px solid #E5E5E5;
+            padding-left: 77px;
+            height: 47px;
+            margin-bottom: 14px;
+            color: #192934;
+            &::placeholder{
+                color: #192934;
+            }
+        }
+        button{
+            display: block;
+            border: none;
+            width: 100%;
+            height: 46px;
+            cursor: pointer;
+        }
+    }
+}
+// .catalog end 
