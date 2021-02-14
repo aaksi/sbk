@@ -19,6 +19,7 @@ body{
     box-sizing: border-box;
 }
 ul,
+ol,
 li{
     margin: 0;
     padding: 0;
@@ -51,6 +52,12 @@ h6{
     padding: 0 55px;
     text-align: center;
     box-shadow: 0px 24px 32px rgba(255, 223, 109, 0.14), 0px 16px 24px rgba(255, 223, 109, 0.1), 0px 2px 6px rgba(255, 223, 109, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s;
+    &:hover{
+        background-color: #ffd951;
+        transform: scale(1.02);
+        transition: all 0.3s;
+    }
 }
 .title{
     font-size: 48px;

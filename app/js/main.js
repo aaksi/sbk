@@ -26,21 +26,25 @@ $(function(){
     $('.catalog__card').hide();
 
     $('.furniture__item').on('click', function(){
+        $('.catalog__card--furniture').hide(),
         $('.catalog__card--furniture').slideToggle();
     });
     // $('.furniture__item2').on('click', function(){
     //     $('.catalog__card--furniture2').slideToggle();
     // });
     $('.table__item').on('click', function(){
+        $('.catalog__card--table').hide(),
         $('.catalog__card--table').slideToggle();
     });
     $('.mattresses__item').on('click', function(){
+        $('.catalog__card--mattresses').hide(),
         $('.catalog__card--mattresses').slideToggle();
     });
     
     $('.catalog__card-btn--close').on('click', function(){
         $('.catalog__card').hide(500);
     });
-    
+
+
     
 });
