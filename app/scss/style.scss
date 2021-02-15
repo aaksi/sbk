@@ -74,7 +74,8 @@
     }
     .menu{
         position: absolute;
-        bottom: -359px;
+        // bottom: -359px;
+        bottom: auto;
         left: 0;
         width: 100%;
         background-color: #fff;
@@ -85,6 +86,12 @@
             transform: translateY(0); 
             transition: all .5s ease-in-out;
             z-index: -1;
+        }
+        .header__phone{
+            display: none;
+        }
+        &__btn{
+            display: none;
         }
         &__inner{
             display: flex;
@@ -118,6 +125,9 @@
                 transition: all 0.1s;
             }
         }
+        .header__phone{
+            display: nonei;
+        }
     }
 
 }
@@ -132,8 +142,9 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #E5E5E5;
     &__inner{
-        min-height: 826px;
+        // min-height: 826px;
         // min-height: calc(100vh - 80px);
         position: relative;
         margin-bottom: 228px;
@@ -161,6 +172,7 @@
     }
     &__form{
         width: 286px;
+        padding-bottom: 172px;
         form{
             input{
                 display: block;
@@ -309,6 +321,7 @@
         img{
             width: 100%;
             height: 140px;
+            object-fit: cover;
             filter: drop-shadow(0px 24px 32px rgba(0, 0, 0, 0.04)), drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.04)), drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.04)), drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
         }
     }
@@ -667,6 +680,7 @@
     }
     &__info{
         max-width: 544px;
+        margin-left: 15px;
     }
     &__info-title{
         margin-bottom: 58px;
@@ -866,6 +880,13 @@
             margin: 0;
         }
     }
+    &__brands-img{
+        display: flex;
+    }
+    &__brand{
+        display: inline-block;
+        margin-left: 30px;
+    }
 }
 // info end 
 
@@ -1008,3 +1029,6 @@
 }
 
 // footer end 
+
+
+@import 'media';

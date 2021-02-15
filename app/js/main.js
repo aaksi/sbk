@@ -11,6 +11,26 @@ $(function(){
         slidesToScroll: 1,
         prevArrow:'<button type="button" class="slider-btn slider-btn--left"></button>',
         nextArrow:'<button type="button" class="slider-btn slider-btn--right"></button>',
+        responsive: [
+            {
+              breakpoint: 1001,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+              }
+            },
+            {
+              breakpoint: 601,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots:true,
+                arrows: false,
+              }
+            },
+        ]
       });
 
     $('.gallery__small img').on('click', function(e){
