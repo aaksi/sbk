@@ -5,6 +5,7 @@ $(function(){
         $('.menu').toggleClass('menu--active')
     });
 
+
     $('.catalog__slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -33,15 +34,15 @@ $(function(){
         ]
       });
 
+
     $('.gallery__small img').on('click', function(e){
         if($('.gallery__big img').attr('src')!== $(this).attr('src')){
 
             $('.gallery__big img').hide().attr('src', $(this).attr('src')).fadeIn(500);
         }
-
-
         e.preventDefault();
     });
+
 
     $('.catalog__card').hide();
 
@@ -49,9 +50,7 @@ $(function(){
         $('.catalog__card--furniture').hide(),
         $('.catalog__card--furniture').slideToggle();
     });
-    // $('.furniture__item2').on('click', function(){
-    //     $('.catalog__card--furniture2').slideToggle();
-    // });
+
     $('.table__item').on('click', function(){
         $('.catalog__card--table').hide(),
         $('.catalog__card--table').slideToggle();
@@ -64,7 +63,5 @@ $(function(){
     $('.catalog__card-btn--close').on('click', function(){
         $('.catalog__card').hide(500);
     });
-
-
     
 });
