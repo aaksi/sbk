@@ -451,6 +451,7 @@
     }
     &__item{
         max-width: 416px;
+        outline: none;
         cursor: pointer;
         &:hover{
             .catalog__item-img{

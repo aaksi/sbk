@@ -65,3 +65,9 @@ h6{
     color: $dark;
     @include muller-medium;
 }
+.catalog__card{
+    display: none;
+}
+#tab-1{
+    display: block;
+}

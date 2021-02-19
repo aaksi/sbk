@@ -44,21 +44,49 @@ $(function(){
     });
 
 
-    $('.catalog__card').hide();
+    // $('.catalog__card').hide();
 
-    $('.furniture__item').on('click', function(){
-        $('.catalog__card--furniture').hide(),
-        $('.catalog__card--furniture').slideToggle();
-    });
+    // $('.furniture__item').on('click', function(){
+    //     $('.catalog__card--furniture').hide(),
+    //     $('.catalog__card--furniture').slideToggle();
+    // });
 
-    $('.table__item').on('click', function(){
-        $('.catalog__card--table').hide(),
-        $('.catalog__card--table').slideToggle();
+    // $('.furniture__item').on('click', function(e){
+      
+    //   $($(this).attr('href')).slideDown(700);
+    //   $('.catalog__card--furniture').not($(this).attr('href')).slideUp(400);
+    //   e.preventDefault();
+    // });
+    $('.catalog__item').on('click', function(e){
+      
+      $($(this).attr('href')).slideDown(700);
+      $('.catalog__card').not($(this).attr('href')).slideUp(400);
+      e.preventDefault();
     });
-    $('.mattresses__item').on('click', function(){
-        $('.catalog__card--mattresses').hide(),
-        $('.catalog__card--mattresses').slideToggle();
-    });
+    
+    // $('.table__item').on('click', function(e){
+    //   $('.catalog__card--table').hide(500);
+    //   $($(this).attr('href')).slideToggle(700);
+    //   e.preventDefault();
+    // });
+    // $('.mattresses__item').on('click', function(e){
+    //   $('.catalog__card--mattresses').hide(500);
+    //   $($(this).attr('href')).slideToggle(700);
+    //   e.preventDefault();
+    // });
+
+
+    
+   
+
+    // $('.table__item').on('click', function(){
+    //     $('.catalog__card--table').hide(),
+    //     $('.catalog__card--table').slideToggle();
+    // });
+    // $('.mattresses__item').on('click', function(){
+    //     $('.catalog__card--mattresses').hide(),
+    //     $('.catalog__card--mattresses').slideToggle();
+    // });
     
     $('.catalog__card-btn--close').on('click', function(){
         $('.catalog__card').hide(500);
